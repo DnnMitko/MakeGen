@@ -14,19 +14,19 @@ MAKEFLAGS += -Otarget\n\
 \n\
 SRCDIR = ";
 
-std::string strMakefileMain_2 = "\n\
+std::string strMakefileMain_2 = "\
 \n\
 export OBJ_DIR = $(PWD)/";
 
-std::string strMakefileMain_3 = "\n\
+std::string strMakefileMain_3 = "\
 \n\
 LINKER_FLAGS = ";
 
-std::string strMakefileMain_4 = "\n\
+std::string strMakefileMain_4 = "\
 \n\
 EXE = ";
 
-std::string strMakefileMain_5 = "\n\
+std::string strMakefileMain_5 = "\
 \n\
 # ============================================================================================\n\
 \n\
