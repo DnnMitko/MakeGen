@@ -1,4 +1,4 @@
-#include "generator/prepare.h"
+#include "Generator.h"
 
 int main() {
 
