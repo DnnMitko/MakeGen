@@ -2,7 +2,7 @@
 
 int main() {
 
-    prepare();
+    Prepare();
 
     return 0;
 }

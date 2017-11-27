@@ -23,4 +23,10 @@ void CommonGen( string );
 
 void SrcTreeGen( string );
 
+string MakeCallGen( string );
+
+string StripPath( string );
+
+string LabelGen( string );
+
 #endif //__GENERATORS__

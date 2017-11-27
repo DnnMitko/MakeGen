@@ -3,7 +3,7 @@
 
 #include <string>
 
-std::string strMakefileMain_1 = "\
+const std::string makefileMain_1 = "\
 export COMMON = $(PWD)/Makefile_Common\n\
 \n\
 include $(COMMON)\n\
@@ -14,19 +14,19 @@ MAKEFLAGS += -Otarget\n\
 \n\
 SRCDIR = ";
 
-std::string strMakefileMain_2 = "\
+const std::string makefileMain_2 = "\
 \n\
 export OBJ_DIR = $(PWD)/";
 
-std::string strMakefileMain_3 = "\
+const std::string makefileMain_3 = "\
 \n\
 LINKER_FLAGS = ";
 
-std::string strMakefileMain_4 = "\
+const std::string makefileMain_4 = "\
 \n\
 EXE = ";
 
-std::string strMakefileMain_5 = "\
+const std::string makefileMain_5 = "\
 \n\
 # ============================================================================================\n\
 \n\
@@ -50,29 +50,29 @@ $(EXE) :\n\
 # ============================================================================================\n\
 \n\
 .PHONY : help\n\
-help : TARGET_COLOR = \033[01;35m\n\
+help : TARGET_COLOR = \\033[01;35m\n\
 \n\
 help :\n\
-	@printf \"$(TARGET_COLOR)\\\"all\\\" or leave blank$(LABEL_COLOR):\\n\\n\
-    1. Builds source files.\\n\\n\
+	@printf \"$(TARGET_COLOR)\\\"all\\\" or leave blank$(LABEL_COLOR):\\n\\\n\
+    1. Builds source files.\\n\\\n\
     2. If there is no executable, links one together.$(NO_COLOR)\\n\\n\"\n\
-	@printf \"$(TARGET_COLOR)\\\"link\\\"$(LABEL_COLOR):\\n\\n\
-    1. Deletes executable.\\n\\n\
+	@printf \"$(TARGET_COLOR)\\\"link\\\"$(LABEL_COLOR):\\n\\\n\
+    1. Deletes executable.\\n\\\n\
     2. Links executable.$(NO_COLOR)\\n\\n\"\n\
-	@printf \"$(TARGET_COLOR)\\\"relink\\\"$(LABEL_COLOR):\\n\\n\
-    1. Deletes executable.\\n\n\
-    2. Builds source files.\\n\n\
-    3. Links executable.$(NO_COLOR)\n\n\"\n\
-	@printf \"$(TARGET_COLOR)\\\"nolink\\\"$(LABEL_COLOR):\\n\n\
-    1. Builds source files.$(NO_COLOR)\n\n\"\n\
-	@printf \"$(TARGET_COLOR)\\\"tree\\\"$(LABEL_COLOR):\\n\n\
+	@printf \"$(TARGET_COLOR)\\\"relink\\\"$(LABEL_COLOR):\\n\\\n\
+    1. Deletes executable.\\n\\\n\
+    2. Builds source files.\\n\\\n\
+    3. Links executable.$(NO_COLOR)\\n\\n\"\n\
+	@printf \"$(TARGET_COLOR)\\\"nolink\\\"$(LABEL_COLOR):\\n\\\n\
+    1. Builds source files.$(NO_COLOR)\\n\\n\"\n\
+	@printf \"$(TARGET_COLOR)\\\"tree\\\"$(LABEL_COLOR):\\n\\\n\
     1. Print source tree.$(NO_COLOR)\\n\\n\"\n\
-	@printf \"$(TARGET_COLOR)\\\"clean\\\"$(LABEL_COLOR):\\n\n\
-    1. Deletes executable.\\n\n\
+	@printf \"$(TARGET_COLOR)\\\"clean\\\"$(LABEL_COLOR):\\n\\\n\
+    1. Deletes executable.\\n\\\n\
     2. Deletes objects directory.$(NO_COLOR)\\n\\n\"\n\
-	@printf \"$(TARGET_COLOR)\\\"delete_executable\\\"$(LABEL_COLOR):\\n\n\
+	@printf \"$(TARGET_COLOR)\\\"delete_executable\\\"$(LABEL_COLOR):\\n\\\n\
     1. Deletes executable.$(NO_COLOR)\\n\\n\"\n\
-	@printf \"$(TARGET_COLOR)\\\"delete_objects\\\"$(LABEL_COLOR):\\n\n\
+	@printf \"$(TARGET_COLOR)\\\"delete_objects\\\"$(LABEL_COLOR):\\n\\\n\
     1. Deletes objects directory.$(NO_COLOR)\\n\\n\"\n\
 \n\
 # ============================================================================================\n\

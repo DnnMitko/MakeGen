@@ -3,17 +3,17 @@
 
 #include <string>
 
-std::string strMakefileCommon = "\
+const std::string makefileCommon = "\
 SHELL                = /bin/bash\n\
 \n\
 SCREEN_WIDTH         = $(shell tput cols)\n\
 \n\
-NO_COLOR             = \033[0m\n\
-OK_COLOR             = \033[01;32m\n\
-ERR_COLOR            = \033[01;31m\n\
-WARN_COLOR           = \033[01;33m\n\
-FILE_COLOR           = \033[01;36m\n\
-LABEL_COLOR          = \033[01;34m\n\
+NO_COLOR             = \\033[0m\n\
+OK_COLOR             = \\033[01;32m\n\
+ERR_COLOR            = \\033[01;31m\n\
+WARN_COLOR           = \\033[01;33m\n\
+FILE_COLOR           = \\033[01;36m\n\
+LABEL_COLOR          = \\033[01;34m\n\
 \n\
 OK_STR               = $(OK_COLOR)[OK]$(NO_COLOR)\n\
 ERR_STR              = $(ERR_COLOR)[ERRORS]$(NO_COLOR)\n\

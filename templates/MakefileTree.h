@@ -3,7 +3,7 @@
 
 #include <string>
 
-std::string strMakefileTree_1 = "\
+const std::string makefileTree_1 = "\
 include $(COMMON)\n\
 \n\
 SRCS = $(wildcard *.cpp)\n\
@@ -13,14 +13,14 @@ OBJS = $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(SRCS))\n\
 .PHONY : all\n\
 all : _header $(OBJS)\n";
 
-std::string strMakefileTree_2 = "\
+const std::string makefileTree_2 = "\
 	@$(PRINT_DEPTH)printf \"$(LABEL_COLOR)╚══$(NO_COLOR)\\n\"\n\
 \n\
 .PHONY : _header\n\
 _header :\n\
 	@$(PRINT_DEPTH_HEADER)printf \"$(LABEL_COLOR)";
 
-std::string strMakefileTree_3 = "$(NO_COLOR)\\n\"\n\
+const std::string makefileTree_3 = "$(NO_COLOR)\\n\"\n\
 \n\
 $(OBJS) : CMD = $(CC) $(COMPILER_FLAGS) -c $< -o $@\n\
 \n\
@@ -31,7 +31,7 @@ $(OBJS) : $(OBJ_DIR)/%.o : %.cpp\n\
 tree : _header\n\
 	@$(LIST)\n";
 
-std::string strMakefileTree_4 = "\
+const std::string makefileTree_4 = "\
 	@$(PRINT_DEPTH)printf \"$(LABEL_COLOR)╚══$(NO_COLOR)\\n\"";
 
 #endif //__MAKEFILE_TREE__
