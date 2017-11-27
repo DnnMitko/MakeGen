@@ -1,6 +1,8 @@
-#include "srcTree.h"
+#include "generator/prepare.h"
 
 int main() {
-    SrcTreeGen( "/home/default/temp/KG/KG_Homework/src" );
+
+    prepare();
+
     return 0;
 }
