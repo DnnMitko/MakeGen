@@ -1,2 +1,2 @@
 all :
-	g++ src/main.cpp src/Generator.cpp -o makeGen
+	@g++ -O2 src/main.cpp src/Generator.cpp -o makeGen
