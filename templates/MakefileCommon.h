@@ -6,8 +6,6 @@
 const std::string makefileCommon = "\
 SHELL                := /bin/bash\n\
 \n\
-SCREEN_WIDTH         := $(shell tput cols)\n\
-\n\
 NO_COLOR             := \\033[0m\n\
 OK_COLOR             := \\033[01;32m\n\
 ERR_COLOR            := \\033[01;31m\n\

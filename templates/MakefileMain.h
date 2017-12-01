@@ -10,6 +10,8 @@ include $(COMMON)\n\
 \n\
 .NOTPARALLEL :\n\
 \n\
+export SCREEN_WIDTH := $(shell tput cols)\n\
+\n\
 MAKEFLAGS += -Otarget\n\
 \n\
 SRCDIR = ";
