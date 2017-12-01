@@ -12,7 +12,7 @@ include $(COMMON)\n\
 \n\
 export SCREEN_WIDTH := $(shell tput cols)\n\
 \n\
-MAKEFLAGS += -Otarget\n\
+MAKEFLAGS += -Otarget --silent\n\
 \n\
 SRCDIR = ";
 
