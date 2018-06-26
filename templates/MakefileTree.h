@@ -22,7 +22,7 @@ _header :\n\
 
 const std::string makefileTree_3 = "$(NO_COLOR)\\n\"\n\
 \n\
-$(OBJS) : CMD = $(CC) $(COMPILER_FLAGS) -c $< -o $@\n\
+$(OBJS) : CMD = $(CC) $(INCLUDE_DIRS) $(COMPILER_FLAGS) -c $< -o $@\n\
 \n\
 $(OBJS) : $(OBJ_DIR)/%.o : %.cpp\n\
 	@$(PRINT_DEPTH)printf \"$(LABEL_COLOR)╠═$(NO_COLOR)\";$(PRINT)\n\

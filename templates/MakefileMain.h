@@ -6,6 +6,8 @@
 const std::string makefileMain_1 = "\
 export COMMON = $(PWD)/Makefile_Common\n\
 \n\
+# export INCLUDE_DIRS = -I$(PWD)/...\n\
+\n\
 include $(COMMON)\n\
 \n\
 .NOTPARALLEL :\n\
